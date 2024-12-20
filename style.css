@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* světle modrá barva pozadí */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('christmas.jpg');
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff; /* bílá barva pozadí */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    font-size: 24px;
+    color: #b8956d; /* vánoční červená */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    margin-top: 10px;
+    width: 85%;
+    font-size: 16px;
+    border: 2px solid #b8956d;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #5a8c45; /* zelená pro aktivní stav */
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    margin-top: 15px;
+    background-color: #b8956d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #363c36; /* tmavší červená pro hover efekt */
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.wrong{
+    color: #d32f2f; /* vánoční červená */
+}
+
+.right{
+    color: #5a8c45; /* vánoční červená */
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

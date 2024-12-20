@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otázka a odpověď</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jak dlouho spolu chodíme (dny)?</h1>
+        <input type="number" id="answer" placeholder="Napište odpověď">
+        <p id="response" ></p>
+        <button onclick="checkAnswer()">Odpovědět</button>
+    </div>
+    <script>
+        function checkAnswer() {
+            const userAnswer = document.getElementById("answer").value.toLowerCase();
+            const response = document.getElementById("response");
+
+            if (userAnswer === "2537" || userAnswer === "2538" || userAnswer === "2536") {
+                response.classList.add("right");
+                response.classList.remove("wrong");
+                response.innerHTML = "Správná odpověď. <br /> <br /> <b>Hledej tam kde spíš.<b>";
+            } else {
+                response.classList.add("wrong");
+                response.classList.remove("right");
+                response.innerText = "Špatná odpoveď";
+            }
+        }
+    </script>
+</body>
+</html>
